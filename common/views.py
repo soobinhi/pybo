@@ -17,3 +17,7 @@ def signup(request):
         form = UserForm()
     return render(request, 'common/signup.html', {'form':form})
 # Create your views here.
+
+def page_not_found(request, exception):
+    """404 not found"""
+    return render(request, 'common/404.html', {})
